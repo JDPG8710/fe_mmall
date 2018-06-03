@@ -1,0 +1,23 @@
+{
+  "name": "fe_mmall",
+  "version": "1.0.0",
+  "description": "mmall front_src",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDPG8710/fe_mmall.git"
+  },
+  "author": "Ding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JDPG8710/fe_mmall/issues"
+  },
+  "homepage": "https://github.com/JDPG8710/fe_mmall#readme",
+  "devDependencies": {
+    "webpack": "^1.15.0",
+    "webpack-cli": "^3.0.1"
+  }
+}
