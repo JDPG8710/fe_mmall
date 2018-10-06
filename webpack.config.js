@@ -1,13 +1,17 @@
 /*
-* @Author: user
-* @Date:   2018-06-03 23:52:58
-* @Last Modified by:   user
-* @Last Modified time: 2018-08-09 21:44:13
+* @Author: Administrator
+* @Date:   2018-09-17 22:41:56
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-10-06 12:04:55
 */
 
 var webpack = require("webpack");
+
 var Ex = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var htmlWebpackPlugin = require('html-webpack-plugin');
+
+//环境变量
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'
 
 var getWebPackHtmlNames = function (name){
     return {            
@@ -19,7 +23,6 @@ var getWebPackHtmlNames = function (name){
            };
 }
 
-
 var config = {
     entry: {
         'common': ['./src/page/common/index.js'],
@@ -28,6 +31,7 @@ var config = {
     },
     output: {
         path: './dist',
+        publicPath: '/dist',
         filename: 'js/[name].js'
     },
     externals: {
@@ -37,6 +41,9 @@ var config = {
           loaders: [{
                 test: /\.css$/,
                 loader: Ex.extract('style-loader', 'css-loader')  
+          },{
+                test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
+                loader: 'url-loader?limit=100&name=resource/[name].[ext]'
           }]
     },
     plugins: [
@@ -50,9 +57,15 @@ var config = {
         new Ex("css/[name].css"),
 
         //html package config
-        new HtmlWebpackPlugin(getWebPackHtmlNames('index')),
-        new HtmlWebpackPlugin(getWebPackHtmlNames('login'))
+        new htmlWebpackPlugin(getWebPackHtmlNames('index')),
+        new htmlWebpackPlugin(getWebPackHtmlNames('login'))
     ]
 };
+
+
+if('dev'=== WEBPACK_ENV)
+{
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8088/');
+}
 
 module.exports = config;
