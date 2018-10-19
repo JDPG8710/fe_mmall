@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-09-17 22:41:56
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-06 12:04:55
+* @Last Modified time: 2018-10-07 15:04:04
 */
 
 var webpack = require("webpack");
@@ -45,6 +45,14 @@ var config = {
                 test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?limit=100&name=resource/[name].[ext]'
           }]
+    },
+    resolve :{
+        alias: {
+            util    : __dirname + '/src/util',
+            page    : __dirname + '/src/page',
+            service : __dirname + '/src/service',
+            img     : __dirname + '/src/img',
+        }
     },
     plugins: [
         //common js package configuration
