@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-09-17 22:41:56
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-07 15:04:04
+* @Last Modified time: 2018-10-21 01:04:33
 */
 
 var webpack = require("webpack");
@@ -48,10 +48,11 @@ var config = {
     },
     resolve :{
         alias: {
-            util    : __dirname + '/src/util',
-            page    : __dirname + '/src/page',
-            service : __dirname + '/src/service',
-            img     : __dirname + '/src/img',
+            node_modules: __dirname + '/node_modules',
+            util        : __dirname + '/src/util',
+            page        : __dirname + '/src/page',
+            service     : __dirname + '/src/service',
+            img         : __dirname + '/src/img'
         }
     },
     plugins: [
@@ -60,7 +61,6 @@ var config = {
             name : 'common',
             filename : 'js/base.js'
         }),
-        
         //css independant package configuration
         new Ex("css/[name].css"),
 
