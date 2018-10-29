@@ -1,0 +1,37 @@
+/*
+* @Author: Administrator
+* @Date:   2018-10-29 00:33:15
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-10-29 01:06:49
+*/
+/* general header nav*/
+.header .logo{
+	position: absolute;
+	left:50px;
+	top:30px;
+	display: block;
+	font-size: 36px;
+	color: #c60023;
+	font-weight: bold;
+
+}
+
+.header .search-con{
+	padding: 40px 0 30px 250px;
+}
+.header .search-con .search-input{
+	width: 550px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	border: 2px;
+	border:solid;
+	border-color: #c60023;
+	outline: none;
+}
+
+.header .search-con .search-btn{
+	position: absolute;
+	height: 44px;
+	width: 80px;
+}
