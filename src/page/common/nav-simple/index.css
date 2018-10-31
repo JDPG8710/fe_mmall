@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-10-21 23:45:07
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-26 22:47:48
+* @Last Modified by:   user
+* @Last Modified time: 2018-10-31 23:38:56
 */
 
 .nav-simple {
@@ -16,4 +16,5 @@
 	font-size: 26px;
 	font-weight: bold;
 	color: #c60023;
+    text-decoration: none;
 }	

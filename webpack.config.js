@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-09-17 22:41:56
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-21 01:04:33
+* @Last Modified by:   user
+* @Last Modified time: 2018-10-31 23:25:30
 */
 
 var webpack = require("webpack");
@@ -13,13 +13,14 @@ var htmlWebpackPlugin = require('html-webpack-plugin');
 //环境变量
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'
 
-var getWebPackHtmlNames = function (name){
+var getWebPackHtmlNames = function (name,title){
     return {            
                 template: './src/view/'+ name +'.html',
                 filename: 'view/'+ name +'.html',
-                hash: true,
-                inject: true,
-                chunks: ['common',name] 
+                hash    : true,
+                title   : title,
+                inject  : true,
+                chunks  : ['common',name] 
            };
 }
 
@@ -28,6 +29,7 @@ var config = {
         'common': ['./src/page/common/index.js'],
         'index': ['./src/page/index/index.js'],
         'login': ['./src/page/login/login.js'],
+        'result': ['./src/page/result/index.js']
     },
     output: {
         path: './dist',
@@ -44,6 +46,9 @@ var config = {
           },{
                 test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?limit=100&name=resource/[name].[ext]'
+          },{
+                test: /\.string$/,
+                loader: 'html-loader'
           }]
     },
     resolve :{
@@ -65,8 +70,9 @@ var config = {
         new Ex("css/[name].css"),
 
         //html package config
-        new htmlWebpackPlugin(getWebPackHtmlNames('index')),
-        new htmlWebpackPlugin(getWebPackHtmlNames('login'))
+        new htmlWebpackPlugin(getWebPackHtmlNames('index','首页')),
+        new htmlWebpackPlugin(getWebPackHtmlNames('login','用户登录')),
+        new htmlWebpackPlugin(getWebPackHtmlNames('result','操作结果'))
     ]
 };
 

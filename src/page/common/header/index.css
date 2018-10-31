@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-10-29 00:33:15
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-29 01:06:49
+* @Last Modified by:   user
+* @Last Modified time: 2018-10-30 00:42:37
 */
 /* general header nav*/
 .header .logo{
@@ -13,7 +13,6 @@
 	font-size: 36px;
 	color: #c60023;
 	font-weight: bold;
-
 }
 
 .header .search-con{

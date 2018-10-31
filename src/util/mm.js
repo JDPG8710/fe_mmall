@@ -1,13 +1,13 @@
 /*
 * @Author: Administrator
 * @Date:   2018-10-07 00:14:07
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-21 00:14:43
+* @Last Modified by:   user
+* @Last Modified time: 2018-10-29 23:24:22
 */
 
 'use strict';
 
-var Hogan = require('hogan');
+var Hogan = require('hogan.js');
 
 var conf = {
 	serverHost : ''
