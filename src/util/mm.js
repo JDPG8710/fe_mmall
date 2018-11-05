@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-10-07 00:14:07
 * @Last Modified by:   user
-* @Last Modified time: 2018-10-29 23:24:22
+* @Last Modified time: 2018-11-04 21:18:55
 */
 
 'use strict';
@@ -69,7 +69,7 @@ var _mm = {
 	//field validation
 	//cell number or mailaddress validation
 	validate : function(val,type){
-		var value = $.trim(value);
+		var value = $.trim(val);
 		if('require' === type){
 			return !!value;
 		}
@@ -82,7 +82,7 @@ var _mm = {
 	},
 	//login function
 	doLogin : function(){
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href); 
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href); 
 	},
 	//back to homePage
 	goHomePage : function(){

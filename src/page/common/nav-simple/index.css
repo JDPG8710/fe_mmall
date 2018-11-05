@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-10-21 23:45:07
 * @Last Modified by:   user
-* @Last Modified time: 2018-10-31 23:38:56
+* @Last Modified time: 2018-11-04 12:05:00
 */
 
 .nav-simple {
@@ -12,7 +12,7 @@
 	background: #fff;
 }
 
-.nav-simple .logo{
+.nav-simple .nav-logo{
 	font-size: 26px;
 	font-weight: bold;
 	color: #c60023;

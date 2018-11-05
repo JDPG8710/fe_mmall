@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= require('html-loader!./layout/head-common.html') %> 
+    </head>
+    <title>
+       <%= htmlWebpackPlugin.options.title%> - happymmall电商平台
+    </title>
+<body>
+       <%= require('html-loader!./layout/nav-simple.html') %>     
+        <div class="page-wrap">
+            <div class="w">
+                <div class="user-con">
+                    <div class="user-title">
+                        用户登录
+                    </div>
+                    <div class="user-box">
+                        <div class="error-item">
+                            <i class="fa fa-minus-circle error-icon"></i>
+                            <p class="err-msg">ERROR:</p>
+                        </div>
+                        <div class="user-item">
+                            <label class="user-label">
+                                <i class="fa fa-user"></i>
+                            </label>
+                            <input class="user-content" id="username" placeholder="请输入用户名" autocomplete="off"></input>
+                        </div>
+                                            <div class="user-item">
+                            <label class="user-label">
+                                <i class="fa fa-lock"></i>
+                            </label>
+                            <input class="user-content" id="password" type="password" placeholder="请输入密码" autocomplete="off"></input>
+                        </div>
+                        <a class="btn btn-submit" id="submit">登录</a>
+                        <div class="link-item">
+                            <a class="link-normal" href="./user-pass-reset.html" target="_blank">忘记密码</a>
+                            <a class="link-normal" href="./user-register.html" target="_blank">注册新用户</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= require('html-loader!./layout/footer.html') %>  
+    <div>
+</body>
+</html>

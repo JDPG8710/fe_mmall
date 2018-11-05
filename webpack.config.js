@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-09-17 22:41:56
 * @Last Modified by:   user
-* @Last Modified time: 2018-10-31 23:25:30
+* @Last Modified time: 2018-11-05 23:11:57
 */
 
 var webpack = require("webpack");
@@ -26,10 +26,12 @@ var getWebPackHtmlNames = function (name,title){
 
 var config = {
     entry: {
-        'common': ['./src/page/common/index.js'],
-        'index': ['./src/page/index/index.js'],
-        'login': ['./src/page/login/login.js'],
-        'result': ['./src/page/result/index.js']
+        'common'            : ['./src/page/common/index.js'],
+        'index'             : ['./src/page/index/index.js'],
+        'user-login'        : ['./src/page/user-login/login.js'],
+        'user-register'     : ['./src/page/user-register/index.js'],
+        'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
+        'result'            : ['./src/page/result/index.js']
     },
     output: {
         path: './dist',
@@ -71,7 +73,9 @@ var config = {
 
         //html package config
         new htmlWebpackPlugin(getWebPackHtmlNames('index','首页')),
-        new htmlWebpackPlugin(getWebPackHtmlNames('login','用户登录')),
+        new htmlWebpackPlugin(getWebPackHtmlNames('user-login','用户登录')),
+        new htmlWebpackPlugin(getWebPackHtmlNames('user-register','用户注册')),
+        new htmlWebpackPlugin(getWebPackHtmlNames('user-pass-reset','找回密码')),
         new htmlWebpackPlugin(getWebPackHtmlNames('result','操作结果'))
     ]
 };

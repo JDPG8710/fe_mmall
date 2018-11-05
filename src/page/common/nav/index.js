@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-10-22 00:16:42
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-25 00:17:38
+* @Last Modified by:   user
+* @Last Modified time: 2018-11-04 22:49:43
 */
 'user strict';
 require('./index.css');
@@ -24,7 +24,7 @@ var nav = {
 		});
 		//register click event
 		$('.js-register').click(function(){
-			window.location.href='./register.html';
+			window.location.href='./user-register.html';
 		});
 		$('.js-logout').click(function(){
 			_user.logout(function(res){
