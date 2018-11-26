@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-10-07 00:14:07
 * @Last Modified by:   user
-* @Last Modified time: 2018-11-04 21:18:55
+* @Last Modified time: 2018-11-26 23:48:27
 */
 
 'use strict';
@@ -29,7 +29,7 @@ var _mm = {
 				}
 				//跳转至登录页面
 				else if(10 === res.status){
-					_this=doLogin();
+					_this.doLogin();
 				}
 				//请求数据错误
 				else if(1 === res.status){

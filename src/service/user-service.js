@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-10-24 23:54:21
 * @Last Modified by:   user
-* @Last Modified time: 2018-11-06 00:28:14
+* @Last Modified time: 2018-11-27 00:18:48
 */
 
 'use strict';
@@ -22,6 +22,23 @@ var _user = {
 	logout : function(resolve,reject){
 		_mm.request({
 			url		: _mm.getServerUrl('/user/logout.do'),
+			method	: 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
+	getUserInfo : function(resolve,reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/get_user_information.do'),
+			method	: 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
+	updateUserInfo : function(userInfo,resolve,reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/update_user_information.do'),
+			data	: userInfo,
 			method	: 'POST',
 			success : resolve,
 			error	: reject
@@ -53,6 +70,16 @@ var _user = {
 	resetPassword : function(request , resolve , reject){
 		_mm.request({
 			url		: _mm.getServerUrl('/user/forget_reset_password.do'),
+			data	: request,
+			method	: 'POST',
+			success : resolve,
+			error	: reject
+		});
+	},
+	//get find user password back question
+	updatePassword : function(request , resolve , reject){
+		_mm.request({
+			url		: _mm.getServerUrl('/user/reset_password.do'),
 			data	: request,
 			method	: 'POST',
 			success : resolve,
