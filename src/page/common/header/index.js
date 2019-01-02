@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2018-10-29 00:33:08
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-10-29 01:08:16
+* @Last Modified time: 2018-12-31 16:20:15
 */
 /*
 * @Author: Administrator
@@ -19,6 +19,7 @@ var _mm = require('util/mm.js');
 var header = {
 	init : function(){
 		this.bindEvent();
+		this.onload();
 	},
 	onload :function(){
 		var keyword=_mm.getUrlParam('keyword');
