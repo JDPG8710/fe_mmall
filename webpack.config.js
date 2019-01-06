@@ -1,8 +1,8 @@
 /*
 * @Author: Administrator
 * @Date:   2018-09-17 22:41:56
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-12-31 16:05:40
+* @Last Modified by:   user
+* @Last Modified time: 2019-01-06 22:56:36
 */
 
 var webpack = require("webpack");
@@ -29,6 +29,7 @@ var config = {
         'common'            : ['./src/page/common/index.js'],
         'index'             : ['./src/page/index/index.js'],
         'list'              : ['./src/page/list/index.js'],
+        'detail'              : ['./src/page/detail/index.js'],
         'user-login'        : ['./src/page/user-login/login.js'],
         'user-register'     : ['./src/page/user-register/index.js'],
         'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
@@ -78,6 +79,7 @@ var config = {
         //html package config
         new htmlWebpackPlugin(getWebPackHtmlNames('index','首页')),
         new htmlWebpackPlugin(getWebPackHtmlNames('list','商品列表页')),
+        new htmlWebpackPlugin(getWebPackHtmlNames('detail','商品详情页')),
         new htmlWebpackPlugin(getWebPackHtmlNames('user-login','用户登录')),
         new htmlWebpackPlugin(getWebPackHtmlNames('user-register','用户注册')),
         new htmlWebpackPlugin(getWebPackHtmlNames('user-pass-reset','找回密码')),
